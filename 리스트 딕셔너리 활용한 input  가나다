@@ -1,0 +1,21 @@
+# 빈 리스트와 딕셔너리 생성
+names = []
+people = {}
+
+# 사용자로부터 이름과 나이를 입력받아 딕셔너리에 저장
+while True:
+    name = input("이름을 입력하세요 (종료: q): ")
+    if name == "q":
+        break
+    age = int(input("나이를 입력하세요: "))
+    people[name] = age
+    names.append(name)
+
+# 이름을 가나다 순으로 정렬
+names.sort()
+
+# 정렬된 이름과 나이를 출력
+print("이름\t나이")
+for name in names:
+    age = people[name]
+    print(f"{name}\t{age}")
